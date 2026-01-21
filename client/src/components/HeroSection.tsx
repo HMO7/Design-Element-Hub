@@ -40,13 +40,13 @@ export default function HeroSection() {
             Hello, I'm
           </motion.p>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white relative inline-block">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-normal mb-6 text-white relative inline-block uppercase tracking-tight">
             Himanshu Suthar
             <motion.div 
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
-              className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-2 md:h-3 bg-primary origin-left"
+              className="absolute -bottom-1 left-0 w-1/3 h-1 bg-primary origin-left"
             />
           </h1>
           
@@ -54,7 +54,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xl md:text-3xl font-display text-muted-foreground mt-8 mb-8"
+            className="text-xl md:text-3xl font-display text-muted-foreground mt-8 mb-8 uppercase tracking-wide"
           >
             Software Developer <span className="text-primary">—</span> AI/ML Cloud Certified
           </motion.h2>
@@ -99,15 +99,14 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 hover:text-primary transition-colors"
+        className="absolute bottom-10 right-10 text-white/50 hover:text-primary transition-colors flex flex-col items-center gap-4"
       >
+        <span className="[writing-mode:vertical-lr] uppercase tracking-[0.3em] text-[10px] font-medium">Scroll</span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center p-1">
-            <div className="w-1 h-2 bg-current rounded-full" />
-          </div>
+          <ArrowRight className="w-5 h-5 rotate-90" />
         </motion.div>
       </motion.a>
     </section>
