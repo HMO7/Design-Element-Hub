@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Cloud } from "lucide-react";
 import logo from "@assets/Asset_3_1769014249866.png";
 
 export default function Footer() {
@@ -15,10 +15,10 @@ export default function Footer() {
 
           <div className="flex gap-6">
             {[
-              { icon: Github, href: "https://github.com" },
-              { icon: Linkedin, href: "https://linkedin.com" },
-              { icon: Twitter, href: "https://twitter.com" },
-              { icon: Mail, href: "mailto:himanshu@example.com" }
+              { icon: Github, href: "https://github.com/HMO7" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/sutharhimanshu/" },
+              { icon: Cloud, href: "https://www.skills.google/public_profiles/ce432748-501d-4b9a-a23c-1e83ee9ccd8e" },
+              { icon: Mail, href: "mailto:himanshumwd7@gmail.com" }
             ].map((social, i) => (
               <a
                 key={i}
