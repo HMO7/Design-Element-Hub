@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* Premium Dark Portfolio Design System */
+
+@layer base {
+  :root {
+    /* Dark graphite backgrounds */
+    --background: 220 15% 7%;
+    --foreground: 0 0% 100%;
+
+    /* Card/surface */
+    --card: 216 16% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 216 16% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Crimson Red Accent */
+    --primary: 2 100% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - slightly lighter dark */
+    --secondary: 216 16% 16%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted text */
+    --muted: 216 16% 20%;
+    --muted-foreground: 224 12% 81%;
+
+    --accent: 2 100% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 16% 20%;
+    --input: 216 16% 20%;
+    --ring: 2 100% 44%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --text-secondary: 224 12% 81%;
+    --surface-elevated: 216 16% 14%;
+    --line-red: 2 100% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+
+  .heading-display {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  /* Red underline animation */
+  .red-underline {
+    @apply relative inline-block;
+  }
+
+  .red-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-primary origin-left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+  }
+
+  .red-underline:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Active red underline */
+  .red-underline-active::after {
+    transform: scaleX(1);
+  }
+
+  /* Card hover lift */
+  .card-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -12px hsl(var(--primary) / 0.15);
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply w-16 h-[2px] bg-primary;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
