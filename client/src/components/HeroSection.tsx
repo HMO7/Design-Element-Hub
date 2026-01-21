@@ -4,7 +4,7 @@ import hmLogo from "@assets/Asset_3_1769014249866.png";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-transparent">
+    <section id="home" className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-background">
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -66,6 +66,36 @@ export default function HeroSection() {
             </a>
           </motion.div>
         </motion.div>
+      </div>
+
+      {/* Extreme Minimal Background with Thin Red Lines */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full" />
+        
+        {/* Animated Thin Red Lines */}
+        <div className="absolute inset-0 opacity-[0.08]">
+          {[...Array(6)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute bg-primary"
+              style={{
+                width: i % 2 === 0 ? '100%' : '1px',
+                height: i % 2 === 0 ? '1px' : '100%',
+                left: i % 2 === 0 ? 0 : `${(i + 1) * 15}%`,
+                top: i % 2 === 0 ? `${(i + 1) * 15}%` : 0,
+              }}
+              animate={{
+                x: i % 2 !== 0 ? [-20, 20, -20] : 0,
+                y: i % 2 === 0 ? [-20, 20, -20] : 0,
+              }}
+              transition={{
+                duration: 10 + i * 2,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
