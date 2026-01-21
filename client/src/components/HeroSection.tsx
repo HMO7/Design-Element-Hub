@@ -58,10 +58,10 @@ export default function HeroSection() {
             >
               <span className="text-[9px] uppercase tracking-[0.6em] font-medium">Explore</span>
               <motion.div
-                animate={{ y: [0, 15, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ y: [0, 20, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
-                <div className="w-[1px] h-12 bg-gradient-to-b from-primary/60 to-transparent" />
+                <div className="w-[1px] h-16 bg-gradient-to-b from-primary via-primary to-transparent" />
               </motion.div>
             </a>
           </motion.div>
