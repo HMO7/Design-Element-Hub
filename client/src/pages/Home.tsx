@@ -89,11 +89,12 @@ export default function Home() {
                 
                 <div className="relative">
                   <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-xl opacity-20" />
-                  <div className="aspect-square rounded-xl bg-card border border-white/10 p-8 flex items-center justify-center relative z-10">
-                    <div className="text-center">
-                      <h3 className="text-6xl font-display font-bold text-white mb-2">2+</h3>
-                      <p className="text-primary font-medium tracking-wide uppercase">Years Experience</p>
-                    </div>
+                  <div className="aspect-[4/5] rounded-xl overflow-hidden bg-card border border-white/10 relative z-10">
+                    <img 
+                      src="/attached_assets/Gemini_Generated_Image_rqirt9rqirt9rqir_1769018160443.png" 
+                      alt="Himanshu Suthar"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
@@ -183,7 +184,7 @@ export default function Home() {
             
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white font-semibold h-14 px-8 rounded-full shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-0.5 transition-all"
+              className="bg-transparent hover:bg-white/5 text-white border border-white/10 font-semibold h-14 px-8 rounded-full transition-all"
             >
               <Download className="mr-2 h-5 w-5" /> Download Resume
             </Button>
@@ -250,7 +251,7 @@ export default function Home() {
                   <Button 
                     type="submit" 
                     disabled={contactMutation.isPending}
-                    className="w-full h-14 bg-primary hover:bg-primary/90 text-white font-semibold text-lg"
+                    className="w-full h-14 bg-transparent hover:bg-white/5 text-white border border-white/10 font-semibold text-lg transition-all"
                   >
                     {contactMutation.isPending ? (
                       <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Sending...</>
