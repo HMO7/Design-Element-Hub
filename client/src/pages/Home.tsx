@@ -188,12 +188,17 @@ export default function Home() {
               Download my resume to learn more about my experience, certifications, and technical background.
             </p>
             
-            <Button 
-              size="lg" 
-              className="bg-transparent hover:bg-white/5 text-white border border-white/10 font-semibold h-14 px-8 rounded-full transition-all"
+            <a 
+              href="/attached_assets/Himanshu_Suthar_Software_1769019439419.pdf" 
+              download="Himanshu_Suthar_Resume.pdf"
             >
-              <Download className="mr-2 h-5 w-5" /> Download Resume
-            </Button>
+              <Button 
+                size="lg" 
+                className="bg-transparent hover:bg-white/5 text-white border border-white/10 font-semibold h-14 px-8 rounded-full transition-all"
+              >
+                <Download className="mr-2 h-5 w-5" /> Download Resume
+              </Button>
+            </a>
           </div>
         </section>
 
