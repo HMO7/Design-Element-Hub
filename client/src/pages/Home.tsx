@@ -37,12 +37,10 @@ export default function Home() {
   // Group skills by category
   const skillCategories = [
     "Programming Languages",
-    "Frameworks & Libraries",
     "Databases",
     "Cloud Platforms",
     "Tools & Technologies",
-    "AI/ML",
-    "Design Tools"
+    "AI/ML"
   ];
   
   return (
