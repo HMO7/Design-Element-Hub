@@ -38,12 +38,10 @@ export default function Home() {
   const skillCategories = [
     "Programming Languages",
     "Frameworks & Libraries",
-    "Web Technologies",
     "Databases",
     "Cloud Platforms",
     "Tools & Technologies",
     "AI/ML",
-    "Development Practices",
     "Design Tools"
   ];
   
@@ -99,11 +97,11 @@ export default function Home() {
                 
                 <div className="relative">
                   <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-xl opacity-20" />
-                  <div className="aspect-[4/5] rounded-xl overflow-hidden bg-card border border-white/10 relative z-10">
+                  <div className="aspect-square rounded-xl overflow-hidden bg-card border border-white/10 relative z-10">
                     <img 
-                      src="/attached_assets/Gemini_Generated_Image_rqirt9rqirt9rqir_1769018160443.png" 
+                      src="/attached_assets/Gemini_Generated_Image_rqirt9rqirt9rqir_1769018614182.png" 
                       alt="Himanshu Suthar"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                     />
                   </div>
                 </div>
