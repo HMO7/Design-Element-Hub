@@ -4,6 +4,30 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-lines {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-line {
+  position: absolute;
+  width: 120%;
+  height: 1px;
+  background: rgba(225, 6, 0, 0.07);
+  animation: moveLine 50s linear infinite;
+}
+
+.bg-line:nth-child(1) { top: 30%; }
+.bg-line:nth-child(2) { top: 55%; animation-duration: 60s; }
+.bg-line:nth-child(3) { top: 75%; animation-duration: 70s; }
+
+@keyframes moveLine {
+  from { transform: translateX(-10%); }
+  to { transform: translateX(10%); }
+}
+
 @layer base {
   :root {
     /* Premium Dark Theme Variables */
