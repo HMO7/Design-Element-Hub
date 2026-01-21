@@ -12,16 +12,6 @@ export default function HeroSection() {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col items-center text-center space-y-8"
         >
-          {/* Subtle Logo Interaction */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 1.5 }}
-            className="mb-4 opacity-40 hover:opacity-100 transition-opacity duration-700"
-          >
-            <img src={hmLogo} alt="HM" className="w-12 h-auto invert grayscale" />
-          </motion.div>
-
           <div className="space-y-4">
             <motion.p 
               initial={{ opacity: 0 }}
@@ -40,7 +30,7 @@ export default function HeroSection() {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 1.2, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-16 h-[1px] bg-primary"
+                className="absolute -bottom-1 left-0 w-full h-[1px] bg-primary"
               />
             </div>
           </div>
