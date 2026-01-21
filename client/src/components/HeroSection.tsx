@@ -4,7 +4,7 @@ import hmLogo from "@assets/Asset_3_1769014249866.png";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-background">
+    <section id="home" className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-transparent">
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
