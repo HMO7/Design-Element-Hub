@@ -35,7 +35,17 @@ export default function Home() {
   };
 
   // Group skills by category
-  const skillCategories = ["Frontend", "Backend", "AI/ML", "Tools"];
+  const skillCategories = [
+    "Programming Languages",
+    "Frameworks & Libraries",
+    "Web Technologies",
+    "Databases",
+    "Cloud Platforms",
+    "Tools & Technologies",
+    "AI/ML",
+    "Development Practices",
+    "Design Tools"
+  ];
   
   return (
     <div className="bg-background min-h-screen text-foreground selection:bg-primary/30">
@@ -118,7 +128,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category) => {
               const categorySkills = skills.filter(s => s.category === category);
               if (categorySkills.length === 0) return null;
