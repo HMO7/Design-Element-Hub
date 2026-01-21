@@ -1,114 +1,87 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import hmLogo from "@assets/Asset_3_1769014249866.png";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Abstract Background Elements */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.2, 1],
-            rotate: [0, 90, 0],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] rounded-full bg-primary/5 blur-[100px]"
-        />
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.1, 1],
-            x: [0, 50, 0],
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[40%] -left-[10%] w-[400px] h-[400px] rounded-full bg-primary/10 blur-[80px]"
-        />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10 text-center">
+    <section id="home" className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-background">
+      <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col items-center text-center space-y-8"
         >
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-lg md:text-xl text-primary font-medium mb-4 tracking-wider uppercase"
+          {/* Subtle Logo Interaction */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 1.5 }}
+            className="mb-4 opacity-40 hover:opacity-100 transition-opacity duration-700"
           >
-            Hello, I'm
-          </motion.p>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-normal mb-6 text-white relative inline-block uppercase tracking-tight">
-            Himanshu Suthar
-            <motion.div 
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
-              className="absolute -bottom-1 left-0 w-1/3 h-1 bg-primary origin-left"
-            />
-          </h1>
-          
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xl md:text-3xl font-display text-muted-foreground mt-8 mb-8 uppercase tracking-wide"
-          >
-            Software Developer <span className="text-primary">—</span> AI/ML Cloud Certified
-          </motion.h2>
+            <img src={hmLogo} alt="HM" className="w-12 h-auto invert grayscale" />
+          </motion.div>
 
-          <motion.p 
+          <div className="space-y-4">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.6 }}
+              transition={{ delay: 0.4, duration: 1 }}
+              className="text-[11px] uppercase tracking-[0.5em] font-medium text-foreground"
+            >
+              Hello, I'm
+            </motion.p>
+            
+            <div className="relative group">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white tracking-tight px-4">
+                Himanshu Suthar
+              </h1>
+              <motion.div 
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 1.2, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-16 h-[1px] bg-primary"
+              />
+            </div>
+          </div>
+          
+          <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-12 leading-relaxed"
+            transition={{ delay: 0.8, duration: 1.2 }}
+            className="flex items-center gap-3 text-muted-foreground"
           >
-            Integrating AI/ML models using TensorFlow into web applications. 
-            Certified in Google Cloud and Oracle AI technologies.
-          </motion.p>
+            <span className="text-[13px] md:text-sm font-light tracking-[0.2em] uppercase">Software Developer</span>
+            <span className="w-1 h-1 rounded-full bg-primary/40" />
+            <span className="text-[13px] md:text-sm font-light tracking-[0.2em] uppercase">AI/ML & Cloud</span>
+          </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.4, duration: 1 }}
+            className="pt-12"
           >
             <a 
-              href="#projects" 
-              className="px-8 py-3 bg-primary text-white rounded-lg font-semibold shadow-lg shadow-primary/25 hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group"
+              href="#about" 
+              className="group flex flex-col items-center gap-4 text-white/30 hover:text-white transition-colors duration-500"
             >
-              View Work
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            
-            <a 
-              href="#contact" 
-              className="px-8 py-3 bg-transparent border border-white/20 text-white rounded-lg font-semibold hover:bg-white/5 hover:border-white/40 transition-all duration-300"
-            >
-              Contact Me
+              <span className="text-[9px] uppercase tracking-[0.6em] font-medium">Explore</span>
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="w-[1px] h-12 bg-gradient-to-b from-primary/60 to-transparent" />
+              </motion.div>
             </a>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.a
-        href="#about"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 right-10 text-white/50 hover:text-primary transition-colors flex flex-col items-center gap-4"
-      >
-        <span className="[writing-mode:vertical-lr] uppercase tracking-[0.3em] text-[10px] font-medium">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <ArrowRight className="w-5 h-5 rotate-90" />
-        </motion.div>
-      </motion.a>
+      {/* Extreme Minimal Background */}
+      <div className="absolute inset-0 pointer-events-none opacity-20">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full" />
+      </div>
     </section>
   );
 }
