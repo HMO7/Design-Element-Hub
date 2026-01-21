@@ -97,7 +97,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-xl opacity-20" />
                   <div className="aspect-square rounded-xl overflow-hidden bg-card border border-white/10 relative z-10">
                     <img 
-                      src="/attached_assets/Gemini_Generated_Image_rqirt9rqirt9rqir_1769018614182.png" 
+                      src="/attached_assets/profile_picture_1769020033862.png" 
                       alt="Himanshu Suthar"
                       className="w-full h-full object-cover object-top"
                     />
