@@ -97,7 +97,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-xl opacity-20" />
                   <div className="aspect-square rounded-xl overflow-hidden bg-card border border-white/10 relative z-10">
                     <img 
-                      src="/attached_assets/profile_picture_1769020033862.png" 
+                      src="/attached_assets/Gemini_Generated_Image_rqirt9rqirt9rqir_1769018614182.png" 
                       alt="Himanshu Suthar"
                       className="w-full h-full object-cover object-top"
                     />
@@ -119,12 +119,12 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
               Technical <span className="text-primary">Proficiency</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto px-4">
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               A comprehensive toolkit tailored for modern software development and AI integration.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category) => {
               const categorySkills = skills.filter(s => s.category === category);
               if (categorySkills.length === 0) return null;
@@ -134,7 +134,7 @@ export default function Home() {
                   <h3 className="text-lg font-semibold text-white/80 border-b border-white/10 pb-2">
                     {category}
                   </h3>
-                  <div className="grid grid-cols-1 gap-3">
+                  <div className="space-y-3">
                     {categorySkills.map((skill, index) => (
                       <SkillCard key={skill.id} skill={skill} index={index} />
                     ))}
@@ -157,12 +157,12 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
                 Featured <span className="text-primary">Projects</span>
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto px-4">
+              <p className="text-muted-foreground max-w-2xl mx-auto">
                 Showcasing innovative applications leveraging modern web technologies and AI.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 <ProjectCard key={project.id} project={project} index={index} />
               ))}
